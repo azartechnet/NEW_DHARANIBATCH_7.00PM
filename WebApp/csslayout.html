@@ -1,0 +1,39 @@
+<style>
+            div
+            {
+                border: 3px solid black;
+                padding: 10px;
+            }
+            .img1
+            {
+                float: right;
+            }
+            .img2
+            {
+                float: left;
+            }
+            .clearfix::after
+            {
+                content:"";
+                clear:both;
+                display:table;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Without ClearFix</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+        <div>
+              <img src="images/b1.jpeg" alt="" class="img1" width="100" height="100">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </div>
+        <h2>With ClearFix</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+        <div class="clearfix">
+              <img src="images/b1.jpeg" alt="" class="img2" width="100" height="100">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </div>
