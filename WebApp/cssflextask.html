@@ -1,0 +1,47 @@
+<style>
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+}
+.container
+{
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+}
+.header,
+.footer
+{
+    background-color: #222;
+    color:white;
+    padding:15px;
+    text-align: center;
+}
+.sidebar
+{
+    background-color: #f4f4f4;
+    flex:1 1 200px;
+    min-width:300px;
+    padding:20px;
+}
+.content
+{
+    background: #ddd;
+    flex: 3 1 300px;
+    min-width: 300px;
+    padding:20px;
+}
+.footer
+{
+    padding:10px;
+}
+</style>
+<div class="container">
+<header class="header">Header</header>
+<div class="body">
+ <aside class="sidebar">SlideBar</aside>
+ <main class="content">MainContent</main>
+</div>
+<footer class="footer">Footer</footer>
+</div>
