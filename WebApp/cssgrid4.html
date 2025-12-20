@@ -1,0 +1,57 @@
+<style>
+    *
+    {
+        margin: 0;
+        padding:0;
+        box-sizing: border-box;
+    }
+    body
+    {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    .grid-container
+    {
+        display: grid;
+        grid-template-areas:"header header  header"
+        "sidebar main main"
+        "footer footer footer";
+        grid-template-columns: 200px 1fr 1fr;
+        grid-template-rows: 80px 400px 60px;
+        gap:10px;
+        padding:10px;
+    }
+    .header
+    {
+        grid-area: header;
+        background-color:brown;
+        color:wheat;
+        text-align: center;
+        line-height: 80px;
+    }
+    .sidebar
+    {
+        grid-area: sidebar;
+        background-color: aqua;
+        padding:20px;
+    }
+    .main
+    {
+        grid-area: main;
+        background-color: aquamarine;
+        padding:20px;
+    }
+    .footer
+    {
+        grid-area: footer;
+        background-color: #333;
+        color:white;
+        text-align: center;
+        line-height: 60px;
+    }
+</style>
+<div class="grid-container">
+  <div class="header">Header</div>
+  <div class="sidebar">SideBar</div>
+  <div class="main">MainContent</div>
+  <div class="footer">Footer</div>
+</div>
