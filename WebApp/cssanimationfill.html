@@ -1,0 +1,60 @@
+<!--
+  animation-fill-mode:none|forwards|backwards|both
+-->
+  <html>
+    <head>
+        <title></title>
+        <style>
+            .box
+            {
+                width: 100px;
+                height: 100px;
+                background-color: steelblue;
+                margin: 20px;
+                animation: fadeMove 2s ease-in-out;
+            }
+            .none
+            {
+                animation-fill-mode: none;
+            }
+            .forwards
+            {
+                animation-fill-mode: forwards;
+            }
+            .backwards
+            {
+                animation-fill-mode: backwards;
+            }
+            .both
+            {
+                animation-fill-mode: both;
+            }
+            @keyframes fadeMove {
+                0% {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+                100% {
+                    opacity: 0;
+                    transform: translateX(200px);
+                }
+            }
+         
+        </style>
+    </head>
+    <body>
+        <div class="box none">
+          None
+        </div>
+        <div class="box forwards">
+            Forwards
+        </div>
+        <div class="box backwards">
+          Backwards
+        </div>
+        <div class="box both">
+            Both
+            </div>
+    
+    </body>
+  </html>
