@@ -1,0 +1,47 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    body
+    {
+        background-color: aqua;
+        font-family: 'Courier New', Courier, monospace;
+        padding:20px;
+    }
+    .container
+    {
+        display: flex;
+        gap:10px;
+        justify-content: center;
+        padding:20px;
+    }
+    .box
+    {
+        background-color: antiquewhite;
+        padding:20px;
+        text-align: center;
+        flex:1;
+        border:2px solid darkcyan;
+    }
+    @media screen and (max-width:600px)
+    {
+        .container
+        {
+            flex-direction: column;
+            align-items: center;
+        }
+        .box
+        {
+            width: 80%;
+        }
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="box">Box1</div>
+        <div class="box">Box2</div>
+        <div class="box">Box3</div>
+        <div class="box">Box4</div>
+        <div class="box">Box5</div>
+        <div class="box">Box6</div>
+    </div>
+</body>
