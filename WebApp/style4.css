@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+  color: white;
+}
+
+.navbar .logo {
+  font-size: 24px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+}
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.banner-image {
+  width: 100%;
+  height: auto; /* or use a fixed height if needed */
+  display: block;
+}
+/* Base styles (mobile-first) */
+.container {
+  padding: 10px;
+}
+
+.box {
+  
+  margin-bottom: 10px;
+  padding: 20px;
+  text-align: center;
+}
+/* Responsive - for screen width 768px and below */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    right: 30px;
+    width: 100px;
+    padding: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* Apply flex only on wider screens */
+@media (min-width: 768px) {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+   
+  }
+
+  .box {
+    flex: 2;
+    margin-bottom: 0; /* remove bottom margin for horizontal layout */
+   
+  }
+}

@@ -1,0 +1,53 @@
+<style>
+    body
+    {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 16px;
+        color:black;
+        background-color: aqua;
+        padding:20px;
+    }
+    .container
+    {
+        max-width: 800px;
+        margin: auto;
+        background-color: wheat;
+        padding:20px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px;
+    }
+    @media print
+    {
+        body
+        {
+            background-color: none;
+            font-size: 12px;
+            color:black;
+        }
+        .no-print
+        {
+            background-color: #333;
+            color:wheat;
+            padding:10px;
+            text-align: center;
+        }
+        h1
+        {
+            page-break-before: always;
+        }
+        .container
+        {
+            box-shadow: none;
+            border:1px solid #ccc;
+        }
+    }
+</style>
+<body>
+    <div class="no-print">
+        This is navigation
+    </div>
+    <div class="container">
+         <h1>Print Media Query</h1>
+         <p>This is Simple Example</p>
+    </div>
+</body>
