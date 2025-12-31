@@ -1,0 +1,186 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    *
+    {
+        margin: 0;
+        padding:0;
+        box-sizing:border-box;
+    }
+    body
+    {
+        font-family: 'Courier New', Courier, monospace;
+        background-color:antiquewhite;
+        color:#333;
+    }
+    /*Navbar*/
+    nav
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #ee8181;
+        padding:15px 40px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0,0.1);
+    }
+    nav .logo
+    {
+        font-size: 24px;
+        font-weight: bold;
+        color:#5cb85c;
+    }
+    nav ul
+    {
+        display: flex;
+        list-style: none;
+    }
+    nav ul li
+    {
+        margin-left: 25px;
+    }
+    nav ul li a
+    {
+        text-decoration: none;
+        color:#333;
+        font-weight: 500;
+    }
+    /*Hero section*/
+    .hero
+    {
+        background-color: #baf12f;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding:50px 40px;
+        flex-wrap: wrap;
+    }
+    .hero-text
+    {
+        max-width: 500px;
+    }
+    .hero-text h1
+    {
+        font-size: 32px;
+        margin-bottom: 15px;
+    }
+    .hero-text p
+    {
+        margin-bottom: 10px;
+        line-height: 1.6;
+    }
+    .hero img
+    {
+        max-width: 300px;
+    }
+     /*Categories*/
+         .categories
+         {
+            text-align: center;
+            padding:50px 20px;
+         }
+         .categories h2
+         {
+            margin-bottom: 10px;
+         }
+         .categories-container
+         {
+            display: flex;
+            justify-content: center;
+            gap:30px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+         }
+         .category
+         {
+            text-align: center;
+         }
+         .category img
+         {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 10px;
+         }
+         .category button
+         {
+            background-color: blue;
+            border:none;
+            padding:8px 20px;
+            color:#fff;
+            border-radius: 5px;
+            cursor: pointer;
+         }
+    /*MediaQueries*/
+    @media  (max-width:768px)
+    {
+    nav
+    {
+        flex-direction: column;
+        align-items: center;
+        gap:20px;
+    }
+    nav ul
+    {
+        flex-direction: column;
+        gap:15px;
+        align-items: center;
+    }
+    .hero
+    {
+        flex-direction: column;
+        text-align: center;
+    }
+    .categories-container
+    {
+        flex-direction: column;
+        
+    }
+    }
+
+
+</style>
+<body>
+    <!--Navbar-->
+    <nav>
+        <div class="logo">ZayApp</div>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Shop</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </nav>
+    <!--Hero Section-->
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Heading</h1>
+        <p>This is paragraph</p>
+        <p>This is paragraph</p>
+      </div>
+      <img src="images/Projectimage/hero.jpg" alt="">
+    </section>
+    <!--Categories-->
+    <section class="categories">
+        <h2>Categories of the month</h2>
+        <p>This is paragraph</p>
+        <div class="categories-container">
+            <div class="category">
+                <img src="images/Projectimage/watch.jpg" alt="">
+                <h3>Watches</h3>
+                <button>GoShop</button>
+            </div>
+            <div class="category">
+                <img src="images/Projectimage/shoes.jpg" alt="">
+                <h3>Shoes</h3>
+                <button>GoShop</button>
+            </div>
+            <div class="category">
+                <img src="images/Projectimage/accessories.jpg" alt="">
+                <h3>accessories</h3>
+                <button>GoShop</button>
+            </div>
+        </div>
+
+    </section>
+</body>
