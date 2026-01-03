@@ -111,6 +111,92 @@
             border-radius: 5px;
             cursor: pointer;
          }
+         /*featured products*/
+         .featured
+         {
+            background: #207af0;
+            padding:50px 20px;
+            text-align: center;
+         }
+         .featured-container
+         {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap:20px;
+            margin-top: 30px;
+         }
+         .product
+         {
+            background-color: #fff;
+            padding:15px;
+            width: 280px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+         }
+         .product img
+         {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+         }
+         .product p
+         {
+            font-size: 14px;
+            margin-bottom: 10px;
+            color:#555;
+         }
+         .price
+         {
+            color:blueviolet;
+            font-weight: bold;
+         }
+         /*Footer*/
+         footer
+         {
+            background-color: #222;
+            color:#ddd;
+            padding:40px 20px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+         }
+         .footer h4
+         {
+            margin-bottom: 15px;
+            color:#fff;
+         }
+         footer ul
+         {
+            list-style-type: none;
+         }
+         footer ul li a
+         {
+            text-decoration: none;
+            color:#ddd;
+            font-size: 14px;
+         }
+         footer .subscribe
+         {
+            margin-top: 20px;
+         }
+         footer input
+         {
+            padding:8px;
+            border-radius: 5px;
+            border: none;
+            margin-right: 5px;
+         }
+         footer button 
+         {
+            padding:8px 15px;
+            background-color: #5cb85c;
+            border:none;
+            color:#fff;
+            border-radius: 5px;
+            cursor: pointer;
+         }
     /*MediaQueries*/
     @media  (max-width:768px)
     {
@@ -135,6 +221,16 @@
     {
         flex-direction: column;
         
+    }
+    .featured-container
+    {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer
+    {
+        flex-direction: column;
+        text-align: center;
     }
     }
 
@@ -183,4 +279,61 @@
         </div>
 
     </section>
+    <!--Featured Products-->
+    <section class="featured">
+        <h2>Featured Product</h2>
+        <p>This is paragraph</p>
+        <div class="featured-container">
+            <div class="product">
+                <img src="images/Projectimage/product1.jpg" alt="">
+                <h3>Gym Weight</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero accusantium repellat ipsa quibusdam fugit? Aliquid atque delectus rerum quam unde explicabo nihil reprehenderit recusandae animi, veniam quos, cupiditate dolor provident!</p>
+                <span class="price">$240.00</span>
+            </div>
+             <div class="product">
+                <img src="images/Projectimage/product2.jpg" alt="">
+                <h3>Gym Weight</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero accusantium repellat ipsa quibusdam fugit? Aliquid atque delectus rerum quam unde explicabo nihil reprehenderit recusandae animi, veniam quos, cupiditate dolor provident!</p>
+                <span class="price">$240.00</span>
+            </div>
+             <div class="product">
+                <img src="images/Projectimage/product3.jpg" alt="">
+                <h3>Gym Weight</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero accusantium repellat ipsa quibusdam fugit? Aliquid atque delectus rerum quam unde explicabo nihil reprehenderit recusandae animi, veniam quos, cupiditate dolor provident!</p>
+                <span class="price">$240.00</span>
+            </div>
+        </div>
+    </section>
+    <!--Footer-->
+    <footer>
+        <div>
+            <h4>Zay Shop</h4>
+            <ul>
+                <li>list1</li>
+                <li>list2</li>
+                <li>list3</li>
+            </ul>
+        </div>
+        <div>
+            <h4>Products</h4>
+            <ul>
+                <li><a href="">a1</a></li>
+                 <li><a href="">a2</a></li>
+                  <li><a href="">a3</a></li>
+                   <li><a href="">a4</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Further Info</h4>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">AboutUs</a></li>
+                <li><a href="">Shop Location</a></li>
+            </ul>
+            <div class="subscribe">
+                <input type="email"/>
+                <button>Subscribe</button>
+            </div>
+        </div>
+    </footer>
 </body>
