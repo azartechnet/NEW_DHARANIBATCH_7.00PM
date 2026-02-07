@@ -1,0 +1,15 @@
+<body>
+    <div class="example">FirstDiv</div>
+    <div class="example">SecondDiv</div>
+    <div>ThirdDiv</div>
+    <br>
+    <br>
+    <p class="example">This is para-1</p>
+    <p>This is para-2</p>
+    <script>
+        var e1=document.getElementsByClassName("example");
+        for(var i=0;i<e1.length;i++){
+            console.log(e1[i].textContent);
+        }
+    </script>
+</body>

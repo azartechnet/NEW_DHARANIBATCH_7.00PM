@@ -1,0 +1,18 @@
+<style>
+    .example
+    {
+        color: blue;
+        font-weight: bold;
+    }
+</style>
+<body>
+    <div class="example">FirstDiv</div>
+    <div class="example">SecondDiv</div>
+    <script>
+        var x = document.querySelector(".example");
+        for(var i=0;i<x.length;i++)
+        {
+            x[i].innerHTML = "ChangedDiv"+(i+1);
+        }
+    </script>
+</body>
