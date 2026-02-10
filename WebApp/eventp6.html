@@ -1,0 +1,10 @@
+<script>
+    //onblur in color change in text field
+    function myfun() {
+        var x = document.getElementById("mytext").value;
+        alert(x);
+        document.getElementById("mytext").style.backgroundColor = "yellow";
+    }
+
+</script>
+<input type="text" id="mytext" onblur="myfun()">
