@@ -1,0 +1,14 @@
+<script>
+    //focusin and focusout in color change in text field
+    function myfun() {
+        var x = document.getElementById("mytext").value;
+        alert(x);
+        document.getElementById("mytext").style.backgroundColor = "yellow";
+    }
+    function myfun1() {
+        var x = document.getElementById("mytext").value;
+        alert(x);
+        document.getElementById("mytext").style.backgroundColor = "white";
+    }
+</script>
+<input type="text" id="mytext" onfocusin="myfun()" onfocusout="myfun1()">

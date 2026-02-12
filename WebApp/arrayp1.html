@@ -1,0 +1,36 @@
+<!-- length()
+// toString()
+// at()
+// join()
+// pop()
+// push()
+// shift()
+// unshift()
+// delete()
+// concat()
+// copyWithin()
+// flat()
+// splice()
+// toSpliced()
+// slice()-->
+<script>
+
+    var arr = ["a", "b", "c", "d", "e"];
+    document.write(arr.length + "<br/>");
+    document.write(arr.toString() + "<br/>");
+    document.write(arr.at(2) + "<br/>");
+    document.write(arr.join("-") + "<br/>");
+    document.write(arr.pop() + "<br/>");
+    document.write(arr.push("f") + "<br/>");
+    document.write(arr.shift() + "<br/>");
+    document.write(arr.unshift("z") + "<br/>");
+    delete arr[2];
+    document.write(arr + "<br/>");
+    var arr1 = ["g", "h", "i"];
+    document.write(arr.concat(arr1) + "<br/>");
+    document.write(arr.copyWithin(0, 3) + "<br/>");
+    
+    document.write(arr.slice(1, 4) + "<br/>");
+
+
+</script>

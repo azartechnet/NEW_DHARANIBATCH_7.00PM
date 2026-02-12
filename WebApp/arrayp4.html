@@ -1,0 +1,27 @@
+<!-- forEach()
+map()
+flatMap()
+filter()
+entries()
+keys()
+spread(...) -->
+<script>
+    var arr = ["a", "b", "c", "d", "e"];
+    arr.forEach(element => document.write(element + "<br/>"));
+    var mappedArr = arr.map(element => element.toUpperCase());
+    document.write(mappedArr + "<br/>");
+    var flatMappedArr = arr.flatMap(element => [element, element.toUpperCase()]);
+    document.write(flatMappedArr + "<br/>");
+    var filteredArr = arr.filter(element => element > "b");
+    document.write(filteredArr + "<br/>");
+    var entries = arr.entries();
+    for (let entry of entries) {
+        document.write(entry + "<br/>");
+    }
+    var keys = arr.keys();
+    for (let key of keys) {
+        document.write(key + "<br/>");
+    }
+    var spreadArr = [...arr];
+    document.write(spreadArr + "<br/>");
+</script>
