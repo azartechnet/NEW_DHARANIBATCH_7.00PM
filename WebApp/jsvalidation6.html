@@ -1,0 +1,36 @@
+<!--
+:disabled
+
+:invalid
+
+:optional
+
+:required
+
+:valid
+
+-->
+<style>
+input:invalid{
+    border: 2px solid red;
+}
+input:valid{
+    border: 2px solid green;
+}
+input:required{
+    background-color: lightyellow;
+}
+input:optional{
+    background-color: lightblue;
+}
+input:disabled{
+    background-color: lightgray;
+}
+</style>
+<form>
+    <label>UserName</label>
+    <input type="text" required pattern="[A-Z]{3}">
+    <label>Email</label>
+    <input type="email" pattern="[A-Z]{3}">
+    <input type="submit" value="Submit">
+</form>
