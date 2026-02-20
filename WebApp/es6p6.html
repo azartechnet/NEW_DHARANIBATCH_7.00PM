@@ -1,0 +1,16 @@
+<h1 id="d1"></h1>
+<h2 id="d2"></h2>
+<script>
+    //creating a Map
+    const fruits = new Map([
+        ["apple", 500],
+        ["banana", 300],
+        ["orange", 200]
+    ]);
+    //displaying the Map
+    document.getElementById("d1").innerHTML = "Fruits and their prices:";
+    fruits.forEach((value, key) => {
+        document.getElementById("d2").innerHTML += key + ": " + value + "<br>";
+    });
+    
+</script>

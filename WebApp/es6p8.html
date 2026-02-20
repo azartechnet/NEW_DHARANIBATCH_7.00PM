@@ -1,0 +1,16 @@
+<script>
+    let myPromise = new Promise(function(resolve, reject) {
+        let x = 10;
+        if (x == 0) {
+            resolve("Promise resolved successfully!");
+        } else {
+            reject("Promise rejected.");
+        }
+    });
+    myPromise.then(function(value) {
+        console.log(value);
+    }).catch(function(error) {
+        console.log(error);
+    });
+
+</script>

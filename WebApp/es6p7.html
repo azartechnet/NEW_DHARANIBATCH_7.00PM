@@ -1,0 +1,32 @@
+<p id="d1"></p>
+<p id="d2"></p>
+<script>
+    let student=new Map();
+    student.set("name","Ali");
+    student.set("age",20);
+    student.set("grade","A");
+    document.getElementById("d1").innerHTML = "Student Information:";
+    student.forEach((value, key) => {
+        document.getElementById("d2").innerHTML += key + ": " + value + "<br>";
+    });
+    //get a value by key
+    let name = student.get("name");
+    console.log("Name: " + name);
+    //check if a key exists    
+     let hasAge = student.has("age");
+    console.log("Has age: " + hasAge);
+    //delete a key-value pair    
+     student.delete("grade");
+     console.log("After deleting grade:");
+     student.forEach((value, key) => {
+        console.log(key + ": " + value);
+    });
+    //clear the Map    
+    student.clear();
+    console.log("After clearing the Map:");
+    student.forEach((value, key) => {
+        console.log(key + ": " + value);
+    });
+
+
+</script>
