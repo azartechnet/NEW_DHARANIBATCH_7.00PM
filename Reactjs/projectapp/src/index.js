@@ -1,17 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+//Basic Rendering
+/*const App=()=>{
+  return(
+    <h1>This is Demo</h1>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'));
+r1.render(<App/>)*/
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+//Dynamic Rendering
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const Sample=()=>{
+  const name="azar";
+  const age=40;
+  return(
+    <div>
+      <h1>Hello,{name}</h1>
+      <p>You age is::{age}</p>
+      <p>Todays date is::{new Date().toLocaleDateString()}</p>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'));
+r1.render(<Sample/>)
