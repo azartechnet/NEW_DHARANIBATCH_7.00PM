@@ -68,7 +68,7 @@ root.render(myElement);*/
 
 //Conditional Rendering
 
-const x=20;
+/*const x=20;
 let text="";
 if(x>10)
 {
@@ -86,6 +86,107 @@ const MyElem=()=>{
   )
 }
 const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<MyElem/>)
+r1.render(<MyElem/>)*/
 
+/*var pid=parseInt(prompt("Enter the pid is::"))
+let text="";
+if(pid==1001)
+{
+  text="pid is equal"
+}
+else
+{
+  text="pid is not equal"
+}
+
+const Myelm=()=>{
+  return(
+    <div>
+      <h1>{text}</h1>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Myelm/>)*/
+
+/*import './index.css'
+import './style.css'
+const App=()=>{
+  return(
+    <h1>Welcome</h1>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<App/>)*/
+//Function Component
+
+/*function Sample()
+{
+  return(
+    <div>
+      <h1>This is function Component</h1>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Sample/>)*/
+
+/*function Greeting()
+{
+  const name="azar";
+  const age=38;
+  return(
+    <div>
+      <h1>Hello,{name}</h1>
+      <p>Your age is::{age}</p>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Greeting/>)*/
+
+//class component
+
+/*class Sample extends React.Component
+{
+  render()
+  {
+    return(
+      <div>
+        <h1>This is class component</h1>       
+      </div>
+    )
+  }
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Sample/>)*/
+
+//using onclick event
+
+/*function SimpleButton()
+{
+   alert("This is Simple Button")
+
+return(
+  <div>
+    <button onClick={SimpleButton}>ClickHere</button>
+  </div>
+)
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<SimpleButton/>)*/
+
+//using props
+
+function Welcome(props)//Argument passing or parameter passing
+{
+  return(
+    <div>
+      <h1>Hello,{props.name}</h1>
+      <h2>Your age is::{props.age}</h2>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Welcome name="azar" age="38"/>)
 
