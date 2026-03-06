@@ -178,7 +178,7 @@ r1.render(<SimpleButton/>)*/
 
 //using props
 
-function Welcome(props)//Argument passing or parameter passing
+/*function Welcome(props)//Argument passing or parameter passing
 {
   return(
     <div>
@@ -188,5 +188,98 @@ function Welcome(props)//Argument passing or parameter passing
   )
 }
 const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<Welcome name="azar" age="38"/>)
+r1.render(<Welcome name="azar" age="38"/>)*/
 
+//Component in Component
+
+/*function Component1()
+{
+  return(
+    <div>
+      <h1>Hello</h1>
+      <p>Component-1</p>
+      <Component2/>
+    </div>
+  )
+}
+function Component2()
+{
+  return(
+    <div>
+      <h1>Component-2</h1>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Component1/>)*/
+
+//Constructor using super
+
+/*class Sample extends React.Component
+{
+  constructor()
+  {
+    super();
+    this.state={name:"Azar",age:35}
+  }
+  render()
+  {
+     return(
+      <div>
+        <h1>Hello{this.state.name}{this.state.age}</h1>
+      </div>
+     )
+  }
+}
+
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Sample/>)*/
+
+//constructor using props
+
+/*class Sample extends React.Component
+{
+  constructor(props)
+  {
+    super(props);
+    this.state={name:props.name,age:props.age}
+  }
+  render()
+  {
+     return(
+      <div>
+        <h1>Hello{this.state.name}{this.state.age}</h1>
+      </div>
+     )
+  }
+}
+
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Sample name="Azar" age="38"/>)*/
+
+class Counter extends React.Component
+{
+  constructor(props)
+  {
+    super(props);
+    this.state={count:0}
+  }
+  increment=()=>{
+    this.setState({count:this.state.count+1})
+  }
+  decrement=()=>{
+    this.setState({count:this.state.count-1})
+  }
+  render()
+  {
+    return(
+      <div>
+        <h2>{this.state.count}</h2>
+        <button onClick={this.increment}>Increment</button>
+        <button onClick={this.decrement}>Decrement</button>
+      </div>
+    )
+  }
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Counter/>)
