@@ -257,7 +257,7 @@ r1.render(<Sample/>)*/
 const r1=ReactDOM.createRoot(document.getElementById('root'))
 r1.render(<Sample name="Azar" age="38"/>)*/
 
-class Counter extends React.Component
+/*class Counter extends React.Component
 {
   constructor(props)
   {
@@ -282,4 +282,68 @@ class Counter extends React.Component
   }
 }
 const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<Counter/>)
+r1.render(<Counter/>)*/
+
+//Changing the state object
+
+/*class Counter extends React.Component
+{
+  constructor(props)
+  {
+    super(props)
+    this.state={name:"Azar",age:38};
+    this.handleChange=this.handleChange.bind(this);
+  }
+  handleChange()
+  {
+    this.setState({name:"mohamed",age:55})
+  }
+  render()
+  {
+    return(
+      <div>
+        <h1>Name is::{this.state.name}</h1>
+        <p>Age is::{this.state.age}</p>
+        <button onClick={this.handleChange}>Change</button>
+      </div>
+    )
+  }
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Counter/>)*/
+
+//Event in Reactjs
+
+/*function Football()
+{
+  const shoot=()=>{
+    // alert("Great shot!!!")
+    var a=prompt("Enter the a value is::")
+    alert("Your value is::"+a)
+  }
+  return(
+    <div>
+      <button onClick={shoot}>Take the shot!!!!</button>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Football/>)*/
+
+//React event based on arguments
+
+function Football()
+{
+  const shoot=(a)=>{
+    alert(a);
+  }
+  return(
+    <div>
+      <button onClick={()=>shoot("Welcome")}>ClickHere</button>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Football/>)
+
+//MissedGoal
