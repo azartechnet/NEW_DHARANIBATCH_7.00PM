@@ -332,7 +332,7 @@ r1.render(<Football/>)*/
 
 //React event based on arguments
 
-function Football()
+/*function Football()
 {
   const shoot=(a)=>{
     alert(a);
@@ -344,6 +344,95 @@ function Football()
   )
 }
 const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<Football/>)
+r1.render(<Football/>)*/
 
-//MissedGoal
+/*function MissedGoal()
+{
+  return<h1>Missed Goal</h1>
+}
+function MadeGoal()
+{
+  return<h1>Goal</h1>
+}
+function Football(props)
+{
+  const isGoal=props.isGoal;
+  return(
+    <div>
+      <h1>Football Game</h1>
+      {isGoal ? <MadeGoal/>:<MissedGoal/>}
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Football isGoal={Math.random()>0.5}/>);*/
+
+//Event Binding in class component
+
+/*class Football extends React.Component
+{
+  shoot=a=>{
+    alert(a)
+  }
+  render()
+  {
+    return(
+      <div>
+        <h1>Footbal Game</h1>
+        <button onClick={()=>this.shoot("azar!!!")}>Shoot</button>
+      </div>
+    )
+  }
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Football/>)*/
+
+//using class
+
+/*class Football extends React.Component
+{
+  render()
+  {
+    const isGoal=this.props.isGoal;
+    if(isGoal)
+    {
+      return<h1>Goal!!!</h1>
+    }
+    else
+    {
+      return<h1>Missed Goal</h1>
+    }
+  }
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Football isGoal={Math.random()>0.5}/>)*/
+
+//Event using Form
+
+function MyForm()
+{
+  let text="";
+  const hs=()=>{
+    // alert("Form Submitted..")
+    let n=prompt("Enter the n value is::")
+    if(n%2==0)
+    {
+      text="Its is Even"
+    }
+    else
+    {
+      text="Its is Odd"
+    }
+  }
+  return(
+    <div>
+      <form onSubmit={hs}>
+        
+        <input type="submit" value="submit"/>
+        Your value is::{text}
+      </form>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById("root"))
+r1.render(<MyForm/>)
