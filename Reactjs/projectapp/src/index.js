@@ -409,7 +409,7 @@ r1.render(<Football isGoal={Math.random()>0.5}/>)*/
 
 //Event using Form
 
-function MyForm()
+/*function MyForm()
 {
   let text="";
   const hs=()=>{
@@ -435,4 +435,56 @@ function MyForm()
   )
 }
 const r1=ReactDOM.createRoot(document.getElementById("root"))
-r1.render(<MyForm/>)
+r1.render(<MyForm/>)*/
+
+//React List using Map
+
+/*function MyList()
+{
+  const items=["item1","item2","item3","item4"]
+  return(
+    <div>
+      <h1>MyList</h1>
+      <ul>
+        {items.map((item,index)=>(
+          <li key={index}>{item}{index}</li>
+        ))}
+      </ul>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<MyList/>)*/
+
+//React List using Map with props
+
+/*function MyList(props)
+{
+  const items=props.items;
+  return(
+    <div>
+      <h1>MyList</h1>
+      <ul>
+        {items.map((item,index)=>(
+          <li>{item}<br/>{index}</li>
+        ))}
+      </ul>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<MyList items={["item1","item2","item3","item4"]}/>)*/
+
+//Destructuring
+
+function Welcome({name,age})
+{
+  return(
+    <div>
+      <h1>Hello,{name}</h1>
+      <p>Your age is::{age}</p>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Welcome name="azar" age={20}/>)
