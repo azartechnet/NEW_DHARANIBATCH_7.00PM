@@ -477,7 +477,7 @@ r1.render(<MyList items={["item1","item2","item3","item4"]}/>)*/
 
 //Destructuring
 
-function Welcome({name,age})
+/*function Welcome({name,age})
 {
   return(
     <div>
@@ -487,4 +487,65 @@ function Welcome({name,age})
   )
 }
 const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<Welcome name="azar" age={20}/>)
+r1.render(<Welcome name="azar" age={20}/>)*/
+
+//Using class
+
+/*class Welcome extends React.Component
+{
+  render()
+  {
+    const {name,age}=this.props;
+    return(
+      <div>
+        <h1>Hello{name}</h1>
+        <p>Your age is::{age}</p>
+      </div>
+    )
+  }
+}
+
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Welcome name="azar" age={20}/>)*/
+
+//In class Component with state
+
+/*class Sample extends React.Component
+{
+  constructor()
+  {
+    super();
+    this.state={name:"Azar",age:20};
+  }
+  render()
+  {
+    const {name,age}=this.state;
+    return(
+      <div>
+        <h1>Hello,{name}</h1>
+        <p>Your age is::{age}</p>
+      </div>
+    )
+  }
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Sample/>)*/
+
+//Destructuring in Array
+
+function Skills()
+{
+  const skills=["Html","css","javascript","react"];
+  const [s1,s2,s3,s4]=skills;
+  return(
+    <div>
+      <ul>
+        <li>{s1}</li>
+        <li>{s2}</li>
+        <li>{s3}</li>
+        <li>{s4}</li>
+      </ul>
+    </div>
+  )
+}const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Skills/>)
