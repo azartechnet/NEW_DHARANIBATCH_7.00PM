@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
 //Basic Rendering
 /*const App=()=>{
@@ -533,7 +533,7 @@ r1.render(<Sample/>)*/
 
 //Destructuring in Array
 
-function Skills()
+/*function Skills()
 {
   const skills=["Html","css","javascript","react"];
   const [s1,s2,s3,s4]=skills;
@@ -548,4 +548,92 @@ function Skills()
     </div>
   )
 }const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<Skills/>)
+r1.render(<Skills/>)*/
+
+//class component mounting lifecycle methods
+
+/*class MyComponent extends React.Component
+{
+  constructor(props)
+  {
+    super(props);
+    console.log("Constructor Called")
+  }
+  componentDidMount()
+  {
+    console.log("Component Did Mount called..")
+  }
+  render()
+  {
+    console.log("Render method called..")
+    return(
+      <div>
+        <h1>MyComponent</h1>
+      </div>
+    )
+  }
+}
+const r1=ReactDOM.createRoot(document.getElementById("root"))
+r1.render(<MyComponent/>)*/
+
+//umounting-componentWillUnMount
+
+/*class Child extends React.Component
+{
+  componentWillUnmount()
+  {
+    console.log("Welcome");
+  }
+  render()
+  {
+    return(
+      <h2>ChildComponent</h2>
+    )
+  }
+}
+const r1=ReactDOM.createRoot(document.getElementById("root"))
+r1.render(<Child/>)*/
+
+//class component updating
+
+/*class Counter extends React.Component
+{
+  constructor()
+  {
+    super();
+    this.state={count:0}
+  }
+  componentDidUpdate(preProps,preState)
+  {
+    console.log("ComponentUpdated..")
+    console.log("Previous Count::",preState.count);
+    console.log("CurrentCount::",this.state.count);
+  }
+  render()
+  {
+    return(
+      <>
+         <h2>Count::{this.state.count}</h2>
+         <button onClick={()=>{this.setState({count:this.state.count+1})}}>Increment</button>
+      </>
+    )
+  }
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Counter/>)*/
+
+//useState
+
+function Counter()
+{
+  const [count,setCount]=useState(0);
+  return(
+    <div>
+      <h1>Count::{count}</h1>
+      <button onClick={()=>setCount(count+1)}>Increment</button>
+      <button onClick={()=>setCount(count-1)}>Decrement</button>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Counter/>)
