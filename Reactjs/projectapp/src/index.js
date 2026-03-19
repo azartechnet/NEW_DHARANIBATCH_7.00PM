@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 //Basic Rendering
 /*const App=()=>{
@@ -624,7 +624,7 @@ r1.render(<Counter/>)*/
 
 //useState
 
-function Counter()
+/*function Counter()
 {
   const [count,setCount]=useState(0);
   return(
@@ -636,4 +636,84 @@ function Counter()
   )
 }
 const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<Counter/>)
+r1.render(<Counter/>)*/
+
+//use string state
+
+/*function Welcome()
+{
+  const [name,setName]=useState("admin");
+  return(
+    <div>
+      <h2>Welcome,{name}!!!</h2>
+      <input type="text" placeholder="Enter the value is::" onClick={(e)=>setName(e.target.value)}/>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Welcome/>)*/
+
+//using Object state
+
+/*function Profile()
+{
+  const [user,setUser]=useState({name:"azar",age:25});
+  const updateAge=()=>{
+    setUser({...user,age:user.age+1})
+  }
+  return(
+    <div>
+      <p>Name::{user.name}</p>
+      <p>Age::{user.age}</p>
+      <button onClick={updateAge}>Increment</button>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Profile/>)*/
+
+//useEffect
+/*function Example()
+{
+  const [count,setCount]=useState(0);
+  useEffect(()=>{
+    console.log("ComponentRender or updated..")
+  })
+  return(
+    <div>
+      <p>Count::{count}</p>
+      <button onClick={()=>setCount(count+1)}>Increment</button>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Example/>)*/
+
+//Example 1
+
+/*const Example=()=>{
+  useEffect(()=>{
+    console.log("Component Mounted")
+  })
+  return(
+    <h3>Hello from useEffect</h3>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Example/>)*/
+
+//Example 2
+
+const Example2=()=>{
+  useEffect(()=>{
+    const timer=setInterval(()=>{
+      console.log("Timer is Running...")
+    },2000)
+    return()=>{
+      clearInterval(timer);
+      console.log("TimerCleared..")
+    }
+  })
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Example2/>)
