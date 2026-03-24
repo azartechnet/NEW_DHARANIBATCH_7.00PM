@@ -704,7 +704,7 @@ r1.render(<Example/>)*/
 
 //Example 2
 
-const Example2=()=>{
+/*const Example2=()=>{
   useEffect(()=>{
     const timer=setInterval(()=>{
       console.log("Timer is Running...")
@@ -716,4 +716,91 @@ const Example2=()=>{
   })
 }
 const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<Example2/>)
+r1.render(<Example2/>)*/
+
+//React without useContext
+
+/*function Component1()
+{
+  const [user,setUser]=useState("mohamed");
+  return(
+    <div>
+      <h1>UserName is::{user}</h1>
+      <button onClick={()=>setUser("azar")}>ClickHere</button>
+      <Component2 user={user}/>
+    </div>
+  )
+}
+function Component2(props)
+{
+   return(
+    <div>
+      <h1>UserName is::{props.user}</h1>
+    </div>
+   )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Component1/>)*/
+
+//React using useContext
+
+/*import { useContext,createContext } from "react";
+
+const uc=createContext();
+
+function Component1()
+{
+  const user=useContext(uc);
+  return(
+    <h1>This is Component-1::{user}</h1>
+  )
+}
+function Component2()
+{
+  const user=useContext(uc);
+  return(
+    <h1>Component2 is::{user}</h1>
+  )
+}
+function Component3()
+{
+  const user=useContext(uc);
+  return(
+    <h1>Component2 is::{user}</h1>
+  )
+}
+function App()
+{
+  const [user,setUser]=useState("mohamed")
+  return(
+    <uc.Provider value={user}>
+        
+        <Component1/>
+        <Component2/>
+        <Component3/>
+
+    </uc.Provider>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById("root"));
+r1.render(<App/>)*/
+
+//Hooks useref
+
+import { useRef } from "react";
+
+function FocusInput()
+{
+   const ir=useRef("");
+   const handleFocus=()=>{
+    ir.current.focus();
+   }
+   return(
+    <div>
+      <input type="text" ref={ir}/>
+      <button onClick={handleFocus}>ClickHere</button>
+    </div>
+   )
+}
+const r1=ReactDOM.createRoot(document.getElementById("root"));
+r1.render(<FocusInput/>)
