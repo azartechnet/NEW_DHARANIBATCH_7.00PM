@@ -787,7 +787,7 @@ r1.render(<App/>)*/
 
 //Hooks useref
 
-import { useRef } from "react";
+/*import { useRef } from "react";
 
 function FocusInput()
 {
@@ -803,4 +803,39 @@ function FocusInput()
    )
 }
 const r1=ReactDOM.createRoot(document.getElementById("root"));
-r1.render(<FocusInput/>)
+r1.render(<FocusInput/>)*/
+
+//useReducer
+
+import { useReducer } from "react";
+
+const initalState=0;
+
+function reducer(state,acction)
+{
+  switch(acction.type)
+  {
+    case "increment":
+      return state+1;
+    case "decrement":
+      return state-1;
+    case "reset":
+      return 0;
+    default:
+      return state;
+  }
+}
+function Counter()
+{
+  const [count,dispatch]=useReducer(reducer,initalState);
+  return(
+    <div>
+      <h2>Counter::{count}</h2>
+      <button onClick={()=>dispatch({type:"increment"})}>Increment</button>
+      <button onClick={()=>dispatch({type:"decrement"})}>decrement</button>
+      <button onClick={()=>dispatch({type:"reset"})}>Reset</button>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById("root"));
+r1.render(<Counter/>)
