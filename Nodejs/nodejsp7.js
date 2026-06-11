@@ -1,0 +1,6 @@
+const fs=require('fs')
+console.log("program started")
+const data=fs.readFileSync('file2.txt','utf-8')
+console.log("file read successfully")
+console.log(data)
+console.log("program ended")
